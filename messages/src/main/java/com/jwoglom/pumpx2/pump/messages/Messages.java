@@ -157,6 +157,8 @@ import com.jwoglom.pumpx2.pump.messages.request.currentStatus.LastBolusStatusV3R
 import com.jwoglom.pumpx2.pump.messages.response.currentStatus.LastBolusStatusV3Response;
 import com.jwoglom.pumpx2.pump.messages.request.currentStatus.CgmStatusV2Request;
 import com.jwoglom.pumpx2.pump.messages.response.currentStatus.CgmStatusV2Response;
+import com.jwoglom.pumpx2.pump.messages.request.currentStatus.CGMStatusCRequest;
+import com.jwoglom.pumpx2.pump.messages.response.currentStatus.CGMStatusCResponse;
 import com.jwoglom.pumpx2.pump.messages.request.currentStatus.BleSoftwareInfoRequest;
 import com.jwoglom.pumpx2.pump.messages.response.currentStatus.BleSoftwareInfoResponse;
 import com.jwoglom.pumpx2.pump.messages.request.currentStatus.CurrentActiveIdpValuesRequest;
@@ -181,6 +183,12 @@ import com.jwoglom.pumpx2.pump.messages.request.control.UserInteractionRequest;
 import com.jwoglom.pumpx2.pump.messages.response.control.UserInteractionResponse;
 import com.jwoglom.pumpx2.pump.messages.request.control.ActivateShelfModeRequest;
 import com.jwoglom.pumpx2.pump.messages.response.control.ActivateShelfModeResponse;
+import com.jwoglom.pumpx2.pump.messages.request.control.JoinFSL3Request;
+import com.jwoglom.pumpx2.pump.messages.response.control.JoinFSL3Response;
+import com.jwoglom.pumpx2.pump.messages.request.control.SetConfigurableFeatureRequest;
+import com.jwoglom.pumpx2.pump.messages.response.control.SetConfigurableFeatureResponse;
+import com.jwoglom.pumpx2.pump.messages.request.control.SetRuntimeConfigRequest;
+import com.jwoglom.pumpx2.pump.messages.response.control.SetRuntimeConfigResponse;
 import com.jwoglom.pumpx2.pump.messages.request.control.SetSensorTypeRequest;
 import com.jwoglom.pumpx2.pump.messages.response.control.SetSensorTypeResponse;
 import com.jwoglom.pumpx2.pump.messages.request.control.CgmHighLowAlertRequest;
@@ -361,6 +369,7 @@ public enum Messages {
     ACTIVE_AAM_BITS(ActiveAamBitsRequest.class, ActiveAamBitsResponse.class),
     LAST_BOLUS_STATUS_V3(LastBolusStatusV3Request.class, LastBolusStatusV3Response.class),
     CGM_STATUS_V2(CgmStatusV2Request.class, CgmStatusV2Response.class),
+    CGM_STATUS_C(CGMStatusCRequest.class, CGMStatusCResponse.class),
     BLE_SOFTWARE_INFO(BleSoftwareInfoRequest.class, BleSoftwareInfoResponse.class),
     CURRENT_ACTIVE_IDP_VALUES(CurrentActiveIdpValuesRequest.class, CurrentActiveIdpValuesResponse.class),
     EXTENDED_BOLUS_STATUS_V2(ExtendedBolusStatusV2Request.class, ExtendedBolusStatusV2Response.class),
@@ -424,6 +433,9 @@ public enum Messages {
     SET_MAX_BASAL_LIMIT(SetMaxBasalLimitRequest.class, SetMaxBasalLimitResponse.class),
     SET_PUMP_SOUNDS(SetPumpSoundsRequest.class, SetPumpSoundsResponse.class),
     SET_PUMP_ALERT_SNOOZE(SetPumpAlertSnoozeRequest.class, SetPumpAlertSnoozeResponse.class),
+    JOIN_FSL3(JoinFSL3Request.class, JoinFSL3Response.class),
+    SET_CONFIGURABLE_FEATURE(SetConfigurableFeatureRequest.class, SetConfigurableFeatureResponse.class),
+    SET_RUNTIME_CONFIG(SetRuntimeConfigRequest.class, SetRuntimeConfigResponse.class),
     // MESSAGES_END
     ;
 
